@@ -1,9 +1,8 @@
 import React from "react";
 import { BackgroundContainer } from "../../shared/styled_components/containers/styles";
-import { ImgLogo } from "../../shared/styled_components/icons/styles";
 
-const CadastrarScreen = () => {
+const VisualizarScreen = () => {
   return <BackgroundContainer></BackgroundContainer>;
 };
 
-export default CadastrarScreen;
+export default VisualizarScreen;
