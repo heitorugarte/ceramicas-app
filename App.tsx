@@ -30,6 +30,8 @@ export default function App() {
             title: "Cadastrar Peças",
             headerTitleStyle: { textAlign: "right" },
             ...TransitionPresets.ModalSlideFromBottomIOS,
+            gestureEnabled: true,
+            gestureDirection: "vertical",
           }}
         />
         <Stack.Screen
@@ -38,6 +40,9 @@ export default function App() {
           options={{
             title: "Visualizar Peças",
             headerTitleStyle: { textAlign: "right" },
+            ...TransitionPresets.ModalSlideFromBottomIOS,
+            gestureEnabled: true,
+            gestureDirection: "vertical",
           }}
         />
       </Stack.Navigator>
