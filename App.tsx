@@ -15,8 +15,8 @@ export default function App() {
           name={"Home"}
           component={HomeScreen}
           options={{
-            title: "Cerâmicas",
-            headerShown: false,
+            title: "Cerâmicas Margareth",
+            headerTitleStyle: { textAlign: "center" },
           }}
         />
         <Stack.Screen
