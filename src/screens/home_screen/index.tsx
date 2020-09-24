@@ -2,13 +2,10 @@ import React from "react";
 import PrimaryButton from "../../shared/styled_components/buttons/primary_button";
 import { BackgroundContainer } from "../../shared/styled_components/containers/styles";
 import { ImgLogo } from "../../shared/styled_components/icons/styles";
-import { NavigationScreenProp } from "react-navigation";
+import { useNavigation } from "@react-navigation/native";
 
-interface IHomeScreenProps {
-  navigation: NavigationScreenProp<any, any>;
-}
-
-const HomeScreen: React.FC<IHomeScreenProps> = ({ navigation }) => {
+const HomeScreen = () => {
+  const navigation = useNavigation();
   return (
     <BackgroundContainer>
       <ImgLogo source={require("../../../assets/logo.png")} />
@@ -18,7 +15,12 @@ const HomeScreen: React.FC<IHomeScreenProps> = ({ navigation }) => {
           navigation.navigate("Cadastrar");
         }}
       />
-      <PrimaryButton label={"Visualizar"} onPress={() => {}} />
+      <PrimaryButton
+        label={"Visualizar"}
+        onPress={() => {
+          navigation.navigate("Visualizar");
+        }}
+      />
     </BackgroundContainer>
   );
 };

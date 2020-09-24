@@ -6,7 +6,8 @@ import {
   TransitionPresets,
 } from "@react-navigation/stack";
 import HomeScreen from "./src/screens/home_screen";
-import CadastrarScreen from "./src/screens/cadastrar_screen";
+import CadastrarScreen from "./src/screens/register_screen";
+import VisualizarScreen from "./src/screens/view_screen";
 
 const Stack = createStackNavigator();
 
@@ -29,6 +30,14 @@ export default function App() {
             title: "Cadastrar Peças",
             headerTitleStyle: { textAlign: "right" },
             ...TransitionPresets.ModalSlideFromBottomIOS,
+          }}
+        />
+        <Stack.Screen
+          name={"Visualizar"}
+          component={VisualizarScreen}
+          options={{
+            title: "Visualizar Peças",
+            headerTitleStyle: { textAlign: "right" },
           }}
         />
       </Stack.Navigator>
